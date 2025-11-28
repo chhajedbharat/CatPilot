@@ -258,17 +258,6 @@
                 <p>"Now we're getting serious! Learn to use Copilot's web search AND upload documents to find real market data!"</p>
             </div>
 
-            <div class="resource-reminder">
-                <h4>📁 Required Resources for This Stage</h4>
-                <p>Upload these SOI reports to Copilot to analyze real industry data:</p>
-                <div class="mini-download-links">
-                    <a href="soi-reports/2023-State-of-the-Restaurant.pdf" download class="mini-download">📄 2023 SOI Report ⬇️</a>
-                    <a href="soi-reports/2024-State-of-the-Restaurant.pdf" download class="mini-download">📄 2024 SOI Report ⬇️</a>
-                    <a href="soi-reports/SOI-2025-Report.pdf" download class="mini-download">📄 2025 SOI Report ⬇️</a>
-                </div>
-                <p class="upload-instruction">👆 In Copilot, click the <strong>attachment icon 📎</strong> to upload these files!</p>
-            </div>
-
             <div class="quest-card">
                 <h3>🎯 Quest 2.1: Web Search for Market Data</h3>
                 <div class="quest-objective">
@@ -282,22 +271,11 @@
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Search the web and tell me: What is the current size of the US restaurant industry in 2025? How much has it grown compared to 2024? What are the main challenges restaurants are facing this year?</code>
+                        <code>What is the current size of the US restaurant industry in 2025? How much has it grown compared to 2024 and 2023? What are the main challenges restaurants are facing this year?</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
-                <div class="data-reference">
-                    <h4>📊 Reference Data (USA Restaurant Industry):</h4>
-                    <table class="data-table">
-                        <tr><th>Metric</th><th>2024</th><th>2025</th></tr>
-                        <tr><td>Market Sales</td><td>$1,060B</td><td>$1,103B (+4.1%)</td></tr>
-                        <tr><td>Employment</td><td>15.4M</td><td>15.5M</td></tr>
-                        <tr><td>Labor Cost Challenge</td><td>96%</td><td>97%</td></tr>
-                        <tr><td>Food Cost Challenge</td><td>95%</td><td>95%</td></tr>
-                    </table>
-                </div>
             </div>
-
             <div class="quest-card">
                 <h3>🎯 Quest 2.2: Competitive Analysis</h3>
                 <div class="quest-objective">
@@ -381,78 +359,101 @@ Create a summary table of the top 5 trends with percentage data if available.</c
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 3.1: Year-over-Year Comparison</h3>
+                <h3>🎯 Quest 3.1: Year-over-Year Growth Analysis</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Learn to analyze trends across multiple years
+                    <strong>Objective:</strong> Extract and analyze multi-year trends from the uploaded reports
                 </div>
                 <div class="skills-learned">
+                    <span class="skill-tag">Data Extraction</span>
                     <span class="skill-tag">Trend Analysis</span>
-                    <span class="skill-tag">Comparison</span>
+                    <span class="skill-tag">Predictive Thinking</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>I've uploaded the State of the Restaurant Industry reports for 2023, 2024, and 2025.
+
+Please extract and analyze the following metrics across all 3 years:
+- Total restaurant industry sales
+- Total employment numbers
+- Percentage of operators citing labor costs as a challenge
+
+Create a comparison table showing each year's data, then analyze:
+1. What is the year-over-year growth rate for sales?
+2. Is growth ACCELERATING or DECELERATING? Show your math.
+3. What story does the labor cost trend tell us about industry health?
+4. Based on these patterns, what can we predict for 2026?
+
+Highlight any surprising findings!</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 3.2: Inflection Point Detective</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Find turning points where trends changed direction
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Inflection Analysis</span>
                     <span class="skill-tag">Pattern Recognition</span>
+                    <span class="skill-tag">Strategic Insight</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>I have restaurant industry data for 3 years:
+                        <code>From the 3 SOI reports I uploaded, I want you to find INFLECTION POINTS - moments where trends changed direction.
 
-2023: Market Sales $937B, Employment 15.1M, Labor cost challenge 89%
-2024: Market Sales $1,060B, Employment 15.4M, Labor cost challenge 96%  
-2025: Market Sales $1,103B, Employment 15.5M, Labor cost challenge 97%
+Analyze the RATE OF CHANGE (not just the values) for these key metrics:
+- Market sales growth rate
+- Customer traffic trends (operators reporting decline)
+- Technology investment intentions
+- Operator confidence/optimism
 
-Please analyze:
-1. What is the growth rate year-over-year?
-2. Is growth accelerating or decelerating?
-3. What does the labor cost trend tell us?
-4. What can we predict for 2026?</code>
+For each metric, tell me:
+1. Is it ACCELERATING (growing faster), DECELERATING (slowing), or FLAT?
+2. WHERE is the inflection point (between which years)?
+3. WHY might this shift have happened?
+
+Final question: Based on these inflection points, is the restaurant industry in a GROWTH phase, MATURITY phase, or early DECLINE phase? Defend your answer with the data.</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 3.2: Inflection Point Analysis</h3>
+                <h3>🎯 Quest 3.3: Battle of the Segments</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Identify turning points and pattern changes
+                    <strong>Objective:</strong> Compare Full-Service vs Limited-Service restaurant performance
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Segment Comparison</span>
+                    <span class="skill-tag">Investment Analysis</span>
+                    <span class="skill-tag">Recommendation</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Analyze the RATE OF CHANGE across 3 years to identify inflection points:
+                        <code>Using the 3 SOI reports, conduct a HEAD-TO-HEAD analysis of restaurant segments:
 
-Market sales growth: 2023→2024 was +13.1%, but 2024→2025 slowed to +4.1%
-Traffic decline: 61% reported decline in 2023, improved to 32% in 2025
-Tech investment: 67% invested in 2023, dropped to 59% planning in 2025
+FULL-SERVICE (sit-down restaurants) vs LIMITED-SERVICE (fast food, fast casual)
 
-Questions:
-1. Which trends are DECELERATING (slowing down)?
-2. Which are IMPROVING?
-3. Which are STUCK (flat)?
-4. What does this tell us about the industry lifecycle - is it in growth, maturity, or decline phase?</code>
-                    </div>
-                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
-                </div>
-            </div>
+Extract from the reports:
+- Sales figures for each segment across 2023, 2024, 2025
+- Growth rates year-over-year
+- Any segment-specific challenges mentioned
 
-            <div class="quest-card">
-                <h3>🎯 Quest 3.3: Segment Analysis</h3>
-                <div class="quest-objective">
-                    <strong>Objective:</strong> Compare different restaurant segments
-                </div>
-                <div class="prompt-box">
-                    <h4>📝 Try This Prompt:</h4>
-                    <div class="prompt-text">
-                        <code>Compare restaurant segments over 3 years:
+Create a "Tale of the Tape" comparison:
+| Metric | Full-Service | Limited-Service | Winner |
 
-Full-Service Sales: 2023 $305B → 2024 $513B (+68%) → 2025 $533B (+3.9%)
-Limited-Service Sales: 2023 $370B → 2024 $510B (+37.8%) → 2025 $532B (+4.3%)
+Then answer the BIG QUESTION:
+If I have $300,000 to invest in opening a restaurant in 2026:
+1. Which segment has shown stronger historical performance?
+2. Which segment appears more STABLE for the future?
+3. Which segment would YOU recommend I enter and WHY?
 
-Analyze:
-1. Which segment grew faster overall?
-2. Which segment is more stable now?
-3. If I'm opening a new restaurant in 2026, which segment has better prospects?
-4. What explains the different growth patterns?
-
-Create a recommendation for which segment to enter.</code>
+Give me a clear recommendation with data to back it up!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
@@ -499,89 +500,112 @@ Create a recommendation for which segment to enter.</code>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 4.1: Create Data Visualizations</h3>
+                <h3>🎯 Quest 4.1: Growth Story Visualization</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Ask Copilot to create charts and graphs
+                    <strong>Objective:</strong> Transform raw data into compelling visual charts
                 </div>
                 <div class="skills-learned">
                     <span class="skill-tag">Chart Creation</span>
-                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Data Extraction</span>
                     <span class="skill-tag">Visual Storytelling</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create a visualization showing restaurant industry growth over 3 years:
+                        <code>Using the 3 SOI reports I uploaded, create a VISUAL GROWTH STORY:
 
-Year | Market Sales | Growth Rate
-2023 | $937B | baseline
-2024 | $1,060B | +13.1%
-2025 | $1,103B | +4.1%
+Step 1: Extract the total restaurant industry sales for 2023, 2024, and 2025
+Step 2: Calculate the year-over-year growth rates
 
-Please create:
-1. A bar chart showing sales by year
-2. A line graph showing the growth rate trend
-3. Add annotations explaining what the deceleration means
+Then create:
+1. A BAR CHART showing sales by year (make the bars progressively larger)
+2. A LINE GRAPH showing the growth RATE trend (this should show deceleration)
+3. Add ANNOTATIONS explaining what the pattern means for the industry
 
-Use colors that show the slowdown clearly (green for growth, yellow/orange for slowing).</code>
+Use a color scheme that tells the story:
+- Green for strong growth periods
+- Yellow/Orange for slowing growth
+- Include a legend and clear labels
+
+Title it: "The Restaurant Industry Growth Story: 2023-2025"</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 4.2: Dashboard Request</h3>
+                <h3>🎯 Quest 4.2: Industry Health Dashboard</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Create a comprehensive dashboard view
+                    <strong>Objective:</strong> Build a comprehensive executive dashboard from report data
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Dashboard Design</span>
+                    <span class="skill-tag">KPI Selection</span>
+                    <span class="skill-tag">Status Indicators</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create a "Restaurant Industry Health Dashboard" with these metrics:
+                        <code>From the 3 SOI reports, create a "RESTAURANT INDUSTRY HEALTH DASHBOARD" for 2025.
 
-POSITIVE INDICATORS:
-- Market Sales: $1,103B ✅
-- Employment: 15.5M ✅
-- Operator Confidence: 41% ⚠️
+Extract and organize metrics into THREE categories:
 
-CHALLENGES:
-- Labor Cost Challenge: 97% 🔴
-- Food Cost Challenge: 95% 🔴
-- Traffic Decline: 32% expect lower ⚠️
+📈 POSITIVE INDICATORS (things going well)
+- Find: Market sales, employment numbers, operator confidence
 
-TECHNOLOGY:
-- Tech Investment Plans: 59% ⚠️
-- Loyalty Program Usage: 52% ⚠️
+⚠️ CHALLENGES (problems to watch)
+- Find: Labor cost concerns, food cost concerns, traffic trends
 
-Create a visual dashboard layout with:
-- Green/Yellow/Red indicators
-- Trend arrows (↑↓→)
-- Brief interpretation of each metric</code>
+💻 TECHNOLOGY ADOPTION
+- Find: Tech investment intentions, loyalty program usage, delivery trends
+
+For EACH metric:
+1. Show the 2025 value
+2. Add a status indicator: ✅ Good | ⚠️ Caution | 🔴 Concern
+3. Show trend arrow: ↑ Improving | → Flat | ↓ Declining (vs prior years)
+4. One-line interpretation
+
+Make it look like an executive dashboard I could present to investors!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 4.3: Forecast Accuracy Check</h3>
+                <h3>🎯 Quest 4.3: Prediction vs Reality Scorecard</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Evaluate predictions vs reality
+                    <strong>Objective:</strong> Evaluate how well earlier predictions held up
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Forecast Analysis</span>
+                    <span class="skill-tag">Critical Evaluation</span>
+                    <span class="skill-tag">Scorecard Design</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create a "Forecast Accuracy Report Card" visualization:
+                        <code>Create a "FORECAST ACCURACY REPORT CARD" by comparing predictions vs reality:
 
-The 2023 report predicted:
-- Sales would grow 5-7% annually → Actual: 13.1% then 4.1%
-- Labor shortage would improve → Actual: Got worse (89%→97%)
-- Tech adoption would accelerate → Actual: Slowed (67%→59%)
-- Consumer spending would stay strong → Actual: Value-conscious (90%)
+Using the 2023 SOI report, find any PREDICTIONS or EXPECTATIONS it made about the future.
+Then check the 2024 and 2025 reports to see what ACTUALLY happened.
 
-Create a visual scorecard showing:
-| Prediction | Expected | Actual | Accurate? | Grade |
+Look for predictions about:
+- Sales growth expectations
+- Labor market outlook
+- Technology adoption trends
+- Consumer behavior forecasts
+- Operator optimism/pessimism
 
-Use letter grades (A, B, C, D, F) and explain why forecasts missed.</code>
+Create a visual scorecard:
+| What Was Predicted | What Actually Happened | Accurate? | Grade (A-F) |
+
+Then answer:
+1. What percentage of predictions were accurate?
+2. What did experts get MOST wrong?
+3. What does this tell us about trusting 2025 predictions for 2026?
+4. What should we be skeptical about?
+
+Make it visually engaging with letter grades and emojis!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
@@ -628,103 +652,126 @@ Use letter grades (A, B, C, D, F) and explain why forecasts missed.</code>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 5.1: Operator Profile Analysis</h3>
+                <h3>🎯 Quest 5.1: Which Operator Wins?</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Determine which business model has the best chance of success
+                    <strong>Objective:</strong> Use data to determine the best business model for 2026
                 </div>
                 <div class="skills-learned">
                     <span class="skill-tag">Strategic Analysis</span>
-                    <span class="skill-tag">Decision Framework</span>
-                    <span class="skill-tag">Risk Assessment</span>
+                    <span class="skill-tag">Data-Driven Decisions</span>
+                    <span class="skill-tag">Profile Matching</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Based on 3-year restaurant industry trends, analyze which operator profile is MOST likely to succeed in 2026:
+                        <code>Using the 3 SOI reports, help me decide which OPERATOR PROFILE has the best chance of success in 2026.
 
-**PROFILE A: The Tech Innovator**
-- Heavy tech investment, AI/automation, digital-first
+First, extract relevant trends from the reports about:
+- Technology adoption and ROI
+- Consumer price sensitivity and value-seeking behavior
+- Off-premise vs dine-in trends
+- Labor and operational challenges
 
-**PROFILE B: The Value Master**  
-- Competing on price/deals, loyalty programs heavy
+Then evaluate these 4 operator profiles against the data:
 
-**PROFILE C: The Experience Creator**
-- Premium positioning, unique dining experiences
+**PROFILE A: The Tech Innovator** - Heavy automation, AI, digital-first
+**PROFILE B: The Value Master** - Competing on price, deals, loyalty programs
+**PROFILE C: The Experience Creator** - Premium positioning, unique experiences
+**PROFILE D: The Hybrid Operator** - Balanced approach across all areas
 
-**PROFILE D: The Hybrid Operator**
-- Balanced tech/value/experience approach
+For each profile, provide:
+1. Does the 3-year trend data SUPPORT this approach? (cite specific data)
+2. Success probability in 2026: High / Medium / Low
+3. Biggest RISK based on the data
+4. Biggest ADVANTAGE based on the data
 
-For each profile, rate:
-1. Does 3-year trend data support this approach? (YES/NO/MAYBE)
-2. Success probability in 2026? (High/Medium/Low)
-3. Key risks?
-4. Key advantages?
-
-RECOMMEND: Which profile should I pursue and why?</code>
+FINAL VERDICT: Which profile should I pursue? Defend your answer with data!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 5.2: Opportunity Gap Analysis</h3>
+                <h3>🎯 Quest 5.2: Find the Gap</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Find market gaps and positioning opportunities
+                    <strong>Objective:</strong> Discover underserved market opportunities
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Gap Analysis</span>
+                    <span class="skill-tag">Market Positioning</span>
+                    <span class="skill-tag">Strategic Recommendation</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>I want to open a NEW restaurant concept. Help me find market gaps:
+                        <code>I want to open a NEW restaurant concept in 2026. Help me find MARKET GAPS using the 3 SOI reports.
 
-Current market situation:
-- 90% of consumers are value-conscious
-- 52% use loyalty programs (stable for 3 years)
-- 50% of sales are off-premises (delivery/takeout)
-- 97% of operators struggle with labor costs
-- Tech investment is SLOWING (67%→59%)
+First, extract insights about:
+- Consumer behavior and preferences (what do they want?)
+- Loyalty program effectiveness
+- Off-premise dining trends (delivery, takeout)
+- Operator pain points (what problems are unsolved?)
+- Technology adoption patterns
 
-Analyze:
-1. What WORKED in 2023-2025? Which concepts thrived?
-2. What GAPS exist? What's underserved?
-3. What's OVERSATURATED? What should I avoid?
-4. Strategic recommendation: What concept has best odds in 2026?
+Then conduct a GAP ANALYSIS:
 
-Create a "Market Entry Strategy" with specific recommendations.</code>
+1. 🎯 What WORKED in 2023-2025? Which concepts thrived according to the data?
+
+2. 🔍 What GAPS exist? Where is consumer demand NOT being met?
+
+3. ⚠️ What's OVERSATURATED? What should I avoid based on competition data?
+
+4. 💡 What EMERGING NEEDS do you see that few are addressing?
+
+Create a "MARKET ENTRY STRATEGY" with:
+- Top 3 concept recommendations ranked by opportunity size
+- For each: Why now? What data supports it? What's the risk?</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 5.3: Scenario Planning</h3>
+                <h3>🎯 Quest 5.3: Plan for Any Future</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Plan for multiple possible futures
+                    <strong>Objective:</strong> Create scenario plans using historical patterns
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Scenario Planning</span>
+                    <span class="skill-tag">Risk Modeling</span>
+                    <span class="skill-tag">Contingency Strategy</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create 3 scenarios for my restaurant opening in 2026:
+                        <code>Using patterns from the 3 SOI reports, create SCENARIO PLANS for my restaurant opening in 2026.
 
-**BULL CASE (Optimistic):**
-- What if market grows faster than 4%?
-- What if labor costs stabilize?
-- What if consumer spending increases?
+First, analyze the historical volatility:
+- How much did key metrics change year-over-year?
+- What unexpected shifts occurred between 2023-2025?
+- What external factors caused the biggest swings?
 
-**BASE CASE (Expected):**
-- Market grows 3-4% (current trend)
-- Challenges remain similar to 2025
-- Steady but slow improvement
+Then build THREE SCENARIOS:
 
-**BEAR CASE (Pessimistic):**
-- What if there's a recession?
-- What if food costs spike again?
-- What if competition intensifies further?
+🐂 **BULL CASE (Best Case)**
+- Based on the best trends you found, what could go RIGHT?
+- What would market growth look like?
+- What probability would you assign?
 
-For each scenario:
-1. Probability of occurring?
-2. Impact on my restaurant?
-3. How should I prepare?
-4. What triggers should I watch for?</code>
+📊 **BASE CASE (Most Likely)**
+- If current trends continue, what should I expect?
+- Project key metrics for 2026
+
+🐻 **BEAR CASE (Worst Case)**
+- Based on challenges in the data, what could go WRONG?
+- What would trigger a downturn?
+- How bad could it get?
+
+For EACH scenario, tell me:
+1. Probability of occurring (%)
+2. Impact on a new restaurant (revenue, costs, survival)
+3. How should I PREPARE for this scenario?
+4. What early WARNING SIGNS should I watch for?</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
@@ -766,108 +813,142 @@ For each scenario:
             <div class="quest-card">
                 <h3>🎯 Quest 6.1: Risk Assessment Matrix</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Create a comprehensive risk assessment
+                    <strong>Objective:</strong> Build a data-driven risk assessment from historical patterns
                 </div>
                 <div class="skills-learned">
-                    <span class="skill-tag">Risk Analysis</span>
-                    <span class="skill-tag">Financial Planning</span>
-                    <span class="skill-tag">Mitigation Strategy</span>
+                    <span class="skill-tag">Risk Identification</span>
+                    <span class="skill-tag">Probability Assessment</span>
+                    <span class="skill-tag">Mitigation Planning</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create a risk assessment for opening a restaurant in 2026 using historical data:
+                        <code>Using the 3 SOI reports, create a comprehensive RISK ASSESSMENT for opening a restaurant in 2026.
 
-Known risks from 2023-2025:
-- Labor shortage: 97% report as challenge
-- Food costs: 95% report as challenge  
-- Traffic decline: 32% expect lower traffic
-- Competition: 48% expect more competition
+Step 1: IDENTIFY RISKS
+Extract from the reports all challenges operators reported:
+- Labor-related challenges (% reporting)
+- Food cost challenges (% reporting)
+- Traffic/customer trends
+- Competition concerns
+- Economic factors
 
-Create a PROBABILITY & IMPACT MATRIX:
+Step 2: BUILD A RISK MATRIX
+Create a table:
+| Risk Factor | 2023 Data | 2024 Data | 2025 Data | Trend | 2026 Probability | Potential Impact |
 
-| Risk Factor | Historical Data | 2026 Probability | Impact | Mitigation Strategy |
+Rate each:
+- Probability: High (>70%) / Medium (40-70%) / Low (<40%)
+- Impact: High / Medium / Low
 
-Rate each: 
-- Probability: High/Medium/Low
-- Impact: High/Medium/Low
+Step 3: STRATEGIC ASSESSMENT
+1. What is the OVERALL RISK LEVEL for opening in 2026?
+2. Is 2026 a GOOD or RISKY time to open? Why?
+3. Based on the data, what type of restaurant has the LOWEST risk profile?
+4. What are the TOP 3 mitigation strategies I MUST implement?
 
-Then give me:
-1. OVERALL RISK LEVEL for 2026
-2. Is 2026 a GOOD or RISKY time to open?
-3. What type of restaurant has LOWEST risk?
-4. Top 3 mitigation strategies I MUST implement</code>
+Make this actionable - I need to present this to potential investors!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 6.2: Financial Model</h3>
+                <h3>🎯 Quest 6.2: 5-Year Financial Model</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Build a 5-year financial projection
+                    <strong>Objective:</strong> Build realistic financial projections based on industry data
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Financial Modeling</span>
+                    <span class="skill-tag">Scenario Analysis</span>
+                    <span class="skill-tag">ROI Calculation</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create a 5-year financial model (2026-2030) for my restaurant:
+                        <code>Create a 5-YEAR FINANCIAL MODEL (2026-2030) for my restaurant using industry data from the SOI reports.
 
-ASSUMPTIONS from historical data:
-- Market growth: ~4% per year (decelerating)
-- Labor costs: Increasing 7-10% per year
-- Food costs: Stable but high
-- Initial investment: $250,000
+Step 1: EXTRACT KEY ASSUMPTIONS
+From the reports, find:
+- Industry growth rate trends (calculate average and recent trajectory)
+- Labor cost trends (% increase year-over-year)
+- Food cost challenges and trends
+- Revenue benchmarks for restaurant segments
 
-MODEL REQUEST:
-Year 1 (2026): STARTUP PHASE
-- Expected revenue?
-- Operating costs breakdown?
-- Profit/Loss?
+Step 2: BUILD THE MODEL
+My starting point: $250,000 initial investment
 
-Years 2-3: GROWTH PHASE  
-- Revenue growth rate?
+Year 1 (2026) - STARTUP:
+- Projected revenue (use industry benchmarks)
+- Operating costs breakdown (labor %, food %, rent, other)
+- Expected profit/loss
+
+Years 2-3 - GROWTH:
+- Revenue growth rate (based on industry trends)
 - When do I break even?
 
-Years 4-5: MATURITY PHASE
-- Stabilized margins?
-- ROI calculation?
+Years 4-5 - MATURITY:
+- Stabilized margins
+- Cumulative ROI
 
-Create THREE SCENARIOS:
-- BULL CASE: 10% annual growth
-- BASE CASE: 4% annual growth (current trend)
-- BEAR CASE: 0% growth / decline
+Step 3: CREATE THREE SCENARIOS
+- 🐂 BULL: What if I beat industry growth?
+- 📊 BASE: What if I match industry trends?
+- 🐻 BEAR: What if challenges worsen?
 
-Show me: Payback period, Break-even point, 5-year ROI</code>
+Show me: Payback period, Break-even point, 5-year ROI for each scenario</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 6.3: Business Plan Summary</h3>
+                <h3>🎯 Quest 6.3: Executive Summary Generator</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Create an executive summary for your restaurant
+                    <strong>Objective:</strong> Create a professional business plan summary backed by data
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Business Writing</span>
+                    <span class="skill-tag">Data Synthesis</span>
+                    <span class="skill-tag">Executive Communication</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>Create an EXECUTIVE SUMMARY for my restaurant business plan:
+                        <code>Create an EXECUTIVE SUMMARY for my restaurant business plan using insights from all 3 SOI reports.
 
-My concept: [Fast Casual / Your choice]
-Location: [Your city]
-Target market: Value-conscious consumers who want quality food quickly
-Budget: $250,000
+My inputs:
+- Concept: [Fast Casual restaurant - or choose your own!]
+- Location: [Your city]
+- Budget: $250,000
 
-Using all the analysis we've done, create a 1-page executive summary with:
+Generate a 1-page executive summary that includes:
 
-1. **Business Concept** (2-3 sentences)
-2. **Market Opportunity** (based on industry data)
-3. **Competitive Advantage** (what makes us different)
-4. **Financial Highlights** (investment, break-even, projected ROI)
-5. **Key Risks & Mitigations** (top 3)
-6. **Why Now?** (why 2026 is the right time)
+1. **Business Concept** (2-3 compelling sentences)
 
-Format it professionally like a real business plan summary.</code>
+2. **Market Opportunity**
+   - Extract market size and growth data from the reports
+   - Why is there opportunity in this space?
+
+3. **Target Customer**
+   - Based on consumer trend data from the reports
+   - What do today's diners want?
+
+4. **Competitive Advantage**
+   - How will we differentiate based on market gaps identified?
+
+5. **Financial Highlights**
+   - Investment required, projected break-even, expected ROI
+   - Use industry benchmarks from the reports
+
+6. **Key Risks & Mitigations**
+   - Top 3 risks identified from the data
+   - Our mitigation strategy for each
+
+7. **Why 2026?**
+   - Make the case for why NOW is the right time using trend data
+
+Format this professionally - make it investor-ready!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
@@ -909,72 +990,90 @@ Format it professionally like a real business plan summary.</code>
             <div class="quest-card">
                 <h3>🎯 Quest 7.1: The $500K Investment Decision</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Make a data-driven investment decision
+                    <strong>Objective:</strong> Make a fully data-driven investment decision
                 </div>
                 <div class="skills-learned">
                     <span class="skill-tag">Investment Analysis</span>
-                    <span class="skill-tag">ROI Comparison</span>
-                    <span class="skill-tag">Strategic Decision</span>
+                    <span class="skill-tag">Comparative Evaluation</span>
+                    <span class="skill-tag">Decision Making</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>You have $500,000 to invest. Use all the 3-year restaurant industry data to decide:
+                        <code>I have $500,000 to invest. Using ALL insights from the 3 SOI reports, help me make the best decision.
 
-**OPTION A: Open Your Own Restaurant**
-- Full control, high risk
-- Industry data: Sales growing 4%, but 97% face labor challenges
+First, extract the key data points that would influence each option:
+- Market growth trends and trajectory
+- Operator success rates and challenges
+- Technology adoption and ROI data
+- Consumer behavior shifts
+
+Then evaluate these FOUR OPTIONS:
+
+**OPTION A: Open My Own Restaurant**
+- Full control, higher risk, potential for higher reward
 
 **OPTION B: Buy a Franchise**
-- Lower risk, proven model
-- Less control, franchise fees
+- Proven model, lower risk, franchise fees reduce margins
 
 **OPTION C: Invest in Restaurant Technology**
-- Tech adoption: 59% of operators still investing
-- Only 28% say tech improved profitability
+- Capitalize on operator pain points, B2B model
 
 **OPTION D: Wait for Better Timing**
-- Is 2026-2027 a better entry point?
-- What would need to change?
+- Hold cash until market conditions improve
 
-For each option, provide:
-1. Expected ROI (5-year)
-2. Risk level (1-10)
-3. Probability of success
-4. Pros and cons based on data
+For EACH option, analyze using report data:
+1. Expected 5-year ROI (estimate with reasoning)
+2. Risk level (1-10, justify with data)
+3. Probability of success (%)
+4. Key PROS supported by data
+5. Key CONS supported by data
 
-FINAL RECOMMENDATION: Which option should I choose and why?
-Show your reasoning using the data we've analyzed.</code>
+🏆 FINAL RECOMMENDATION:
+Which option should I choose? Show me your reasoning step-by-step using specific data from the reports!</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>
             </div>
 
             <div class="quest-card">
-                <h3>🎯 Quest 7.2: Startup Validation</h3>
+                <h3>🎯 Quest 7.2: Food-Tech Startup Validation</h3>
                 <div class="quest-objective">
-                    <strong>Objective:</strong> Validate a food-tech startup idea
+                    <strong>Objective:</strong> Validate a startup idea using industry pain points
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Problem Identification</span>
+                    <span class="skill-tag">Market Validation</span>
+                    <span class="skill-tag">Go/No-Go Decision</span>
                 </div>
                 <div class="prompt-box">
                     <h4>📝 Try This Prompt:</h4>
                     <div class="prompt-text">
-                        <code>I'm considering starting a food-tech STARTUP. Help me validate the idea:
+                        <code>I'm considering starting a FOOD-TECH STARTUP. Help me validate the idea using the SOI reports.
 
-PROBLEMS I COULD SOLVE (from industry data):
-- 97% struggle with labor costs → Labor automation solution?
-- Only 28% say tech helps profits → Better ROI tech?
-- 70% use 3rd party delivery (lose 15-30% margin) → Delivery solution?
-- Tech complexity → Simplified platform?
+Step 1: PROBLEM DISCOVERY
+From the 3 reports, identify the BIGGEST pain points operators face:
+- What challenges have the highest % of operators reporting them?
+- Which problems are getting WORSE over time?
+- Which problems have NO good solution yet?
 
-For my chosen problem [LABOR AUTOMATION]:
+Step 2: PICK A PROBLEM
+Based on your analysis, recommend ONE problem I should solve and explain why.
 
-1. **MARKET SIZE**: How many potential customers?
-2. **WILLINGNESS TO PAY**: Are operators increasing tech spend?
-3. **COMPETITION**: Who's already solving this?
-4. **TIMING**: Is the market ready NOW?
-5. **DIFFERENTIATION**: What's my unique angle?
+Step 3: VALIDATE THE OPPORTUNITY
+For the chosen problem, analyze:
 
-Give me a GO / NO-GO recommendation with specific reasons.</code>
+1. **MARKET SIZE**: How many restaurants face this problem? (use report data)
+2. **WILLINGNESS TO PAY**: Is tech spending increasing or decreasing for this?
+3. **URGENCY**: Is this problem getting worse? Do they NEED a solution now?
+4. **COMPETITION**: Based on tech adoption data, is this space crowded or open?
+5. **TIMING**: Does the 3-year trend suggest the market is ready?
+
+Step 4: GO / NO-GO DECISION
+- Give me a clear GO ✅ or NO-GO ❌ recommendation
+- Support your decision with at least 3 data points from the reports
+- If GO: What should my first step be?
+- If NO-GO: What problem should I consider instead?</code>
                     </div>
                     <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
                 </div>

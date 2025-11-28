@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon & Co-Pilot 🐱 - M365 Copilot Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="visual-cards.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <section id="landing" class="active">
+        <div class="landing-container">
+            <div class="cat-mascot">🐱</div>
+            <h1 class="game-title">Dungeon & Co-Pilot</h1>
+            <p class="subtitle">Design Your Dream Restaurant with AI!</p>
+            <div class="intro-text">
+                <p>Welcome, brave adventurer! 🎮</p>
+                <p>From now on, you'll be tasked with completing various quests using <strong>Microsoft 365 Copilot Chat</strong> (Free Web Version).</p>
+                <p>Design your own restaurant by completing <strong>7 quests</strong> one by one with your cute cat pilot companion!</p>
+            </div>
+            <div class="intro-image">
+                <img src="img/Intro.PNG" alt="Design My Restaurant - CATPILOT Quests" class="hero-image">
+            </div>
+            <button class="btn-start" onclick="showSection('intro')">Start Your Adventure! 🚀</button>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+            <div class="content-card">
+                <h2>🐱 Meet Your Co-Pilot!</h2>
+                <div class="cat-guide">
+                    <div class="cat-avatar">🐱</div>
+                    <div class="speech-bubble">
+                        <p>"Meow! I'm your AI guide! Together we'll learn how to use <strong>M365 Copilot Chat</strong> to build an amazing restaurant business!"</p>
+                        <p>"Each quest teaches you a new Copilot skill - from simple questions to complex data analysis!"</p>
+                    </div>
+                </div>
+                <div class="copilot-intro">
+                    <h3>What is M365 Copilot Chat? 🤖</h3>
+                    <div class="info-box">
+                        <p><strong>Microsoft 365 Copilot Chat</strong> is a free AI assistant that can:</p>
+                        <ul>
+                            <li>✅ Answer questions and explain concepts</li>
+                            <li>✅ Analyze documents you upload (PDFs, Word, Excel)</li>
+                            <li>✅ Search the web for current information</li>
+                            <li>✅ Create visualizations and charts</li>
+                            <li>✅ Help with planning and decision-making</li>
+                        </ul>
+                        <a href="https://copilot.microsoft.com" target="_blank" class="btn-link">Open Copilot Chat →</a>
+                    </div>
+                </div>
+
+                <div class="resources-section">
+                    <h3>📚 Download Your Quest Resources</h3>
+                    <div class="info-box resources-box">
+                        <p>You'll need these <strong>State of the Restaurant Industry Reports</strong> for your quests. Upload them to Copilot to analyze real industry data!</p>
+                        <div class="download-grid">
+                            <a href="soi-reports/2023-State-of-the-Restaurant.pdf" download class="download-card">
+                                <span class="download-icon">📄</span>
+                                <span class="download-year">2023</span>
+                                <span class="download-title">SOI Report</span>
+                                <span class="download-btn">⬇️ Download</span>
+                            </a>
+                            <a href="soi-reports/2024-State-of-the-Restaurant.pdf" download class="download-card">
+                                <span class="download-icon">📄</span>
+                                <span class="download-year">2024</span>
+                                <span class="download-title">SOI Report</span>
+                                <span class="download-btn">⬇️ Download</span>
+                            </a>
+                            <a href="soi-reports/SOI-2025-Report.pdf" download class="download-card">
+                                <span class="download-icon">📄</span>
+                                <span class="download-year">2025</span>
+                                <span class="download-title">SOI Report</span>
+                                <span class="download-btn">⬇️ Download</span>
+                            </a>
+                        </div>
+                        <p class="download-tip">💡 <strong>Tip:</strong> Download all 3 reports now! You'll upload them to Copilot starting from Stage 2.</p>
+                    </div>
+                </div>
+                <button class="btn-next" onclick="showSection('quest-map')">View Quest Map 🗺️</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quest Map -->
+    <section id="quest-map">
+        <div class="container">
+            <h2>🗺️ Your Quest Journey</h2>
+            <p class="map-subtitle">Click on each stage to begin your quest!</p>
+            <div class="quest-path">
+                <div class="quest-node unlocked" onclick="showSection('stage1')">
+                    <div class="node-number">1</div>
+                    <div class="node-title">First Steps</div>
+                    <div class="node-desc">Basic Copilot Skills</div>
+                    <span class="difficulty">⭐</span>
+                </div>
+                <div class="path-line"></div>
+                <div class="quest-node" onclick="showSection('stage2')">
+                    <div class="node-number">2</div>
+                    <div class="node-title">Market Explorer</div>
+                    <div class="node-desc">Research & Web Search</div>
+                    <span class="difficulty">⭐⭐</span>
+                </div>
+                <div class="path-line"></div>
+                <div class="quest-node" onclick="showSection('stage3')">
+                    <div class="node-number">3</div>
+                    <div class="node-title">Data Detective</div>
+                    <div class="node-desc">Analysis & Trends</div>
+                    <span class="difficulty">⭐⭐</span>
+                </div>
+                <div class="path-line"></div>
+                <div class="quest-node" onclick="showSection('stage4')">
+                    <div class="node-number">4</div>
+                    <div class="node-title">Vision Crafter</div>
+                    <div class="node-desc">Visualization</div>
+                    <span class="difficulty">⭐⭐⭐</span>
+                </div>
+                <div class="path-line"></div>
+                <div class="quest-node" onclick="showSection('stage5')">
+                    <div class="node-number">5</div>
+                    <div class="node-title">Strategy Master</div>
+                    <div class="node-desc">Decision Making</div>
+                    <span class="difficulty">⭐⭐⭐</span>
+                </div>
+                <div class="path-line"></div>
+                <div class="quest-node" onclick="showSection('stage6')">
+                    <div class="node-number">6</div>
+                    <div class="node-title">Business Builder</div>
+                    <div class="node-desc">Business Planning</div>
+                    <span class="difficulty">⭐⭐⭐⭐</span>
+                </div>
+                <div class="path-line"></div>
+                <div class="quest-node" onclick="showSection('stage7')">
+                    <div class="node-number">7</div>
+                    <div class="node-title">Grand Finale</div>
+                    <div class="node-desc">Investment & Launch</div>
+                    <span class="difficulty">⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+            <button class="btn-back" onclick="showSection('intro')">← Back</button>
+        </div>
+    </section>
+
+    <!-- Stage 1: First Steps -->
+    <section id="stage1">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest1.png" alt="Quest 1 - First Steps" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 1</span>
+                <h2>🐣 First Steps - Basic Copilot Skills</h2>
+                <div class="difficulty-display">Difficulty: ⭐ Easy</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"Let's start simple! In this quest, you'll learn how to ask Copilot questions and get helpful answers!"</p>
+            </div>
+            
+            <div class="quest-card">
+                <h3>🎯 Quest 1.1: Your First Conversation</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Learn to have a basic conversation with Copilot
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Basic Prompting</span>
+                    <span class="skill-tag">Getting Answers</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>I'm thinking of opening a restaurant. Can you explain the different types of restaurants I could open? Please list them with a brief description of each.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+                <div class="expected-result">
+                    <h4>✨ What You'll Learn:</h4>
+                    <ul>
+                        <li>How Copilot structures answers clearly</li>
+                        <li>Restaurant types: Full-Service, QSR, Fast Casual, Fine Dining, etc.</li>
+                        <li>How to ask follow-up questions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 1.2: Follow-Up Questions</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Learn to dig deeper with follow-up prompts
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try These Follow-ups:</h4>
+                    <div class="prompt-text">
+                        <code>Which type of restaurant is best for a first-time owner with a $200,000 budget?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy</button>
+                    <div class="prompt-text" style="margin-top: 10px;">
+                        <code>What are the pros and cons of opening a Fast Casual restaurant vs a Food Truck?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 1.3: Getting Specific Information</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Ask for structured, actionable information
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a checklist of the 10 most important things I need to do before opening a restaurant. Format it as a numbered list with brief explanations.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 1 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Had first conversation with Copilot</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Asked follow-up questions</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Got a structured list as output</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Understand different restaurant types</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('quest-map')">← Quest Map</button>
+                <button class="btn-next" onclick="showSection('stage2')">Stage 2: Market Explorer →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 2: Market Explorer -->
+    <section id="stage2">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest2.png" alt="Quest 2 - Market Explorer" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 2</span>
+                <h2>🔍 Market Explorer - Research & Web Search</h2>
+                <div class="difficulty-display">Difficulty: ⭐⭐ Medium</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"Now we're getting serious! Learn to use Copilot's web search AND upload documents to find real market data!"</p>
+            </div>
+
+            <div class="resource-reminder">
+                <h4>📁 Required Resources for This Stage</h4>
+                <p>Upload these SOI reports to Copilot to analyze real industry data:</p>
+                <div class="mini-download-links">
+                    <a href="soi-reports/2023-State-of-the-Restaurant.pdf" download class="mini-download">📄 2023 SOI Report ⬇️</a>
+                    <a href="soi-reports/2024-State-of-the-Restaurant.pdf" download class="mini-download">📄 2024 SOI Report ⬇️</a>
+                    <a href="soi-reports/SOI-2025-Report.pdf" download class="mini-download">📄 2025 SOI Report ⬇️</a>
+                </div>
+                <p class="upload-instruction">👆 In Copilot, click the <strong>attachment icon 📎</strong> to upload these files!</p>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 2.1: Web Search for Market Data</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Use Copilot's web search to find current industry information
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Web Search</span>
+                    <span class="skill-tag">Market Research</span>
+                    <span class="skill-tag">Current Data</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Search the web and tell me: What is the current size of the US restaurant industry in 2025? How much has it grown compared to 2024? What are the main challenges restaurants are facing this year?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+                <div class="data-reference">
+                    <h4>📊 Reference Data (USA Restaurant Industry):</h4>
+                    <table class="data-table">
+                        <tr><th>Metric</th><th>2024</th><th>2025</th></tr>
+                        <tr><td>Market Sales</td><td>$1,060B</td><td>$1,103B (+4.1%)</td></tr>
+                        <tr><td>Employment</td><td>15.4M</td><td>15.5M</td></tr>
+                        <tr><td>Labor Cost Challenge</td><td>96%</td><td>97%</td></tr>
+                        <tr><td>Food Cost Challenge</td><td>95%</td><td>95%</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 2.2: Competitive Analysis</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Research competitors and market positioning
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>I want to open a Fast Casual restaurant in Austin, Texas. Search the web and tell me:
+1. What are the most successful fast casual chains in Texas right now?
+2. What food trends are popular in Austin?
+3. What's the average cost to open a fast casual restaurant?
+4. Who would be my main competitors?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 2.3: Consumer Trends Research</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Understand what customers want
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Search for the latest consumer dining trends in 2025. What do customers care about most when choosing a restaurant? Consider:
+- Price sensitivity and value
+- Delivery and takeout preferences  
+- Health and dietary preferences
+- Technology (ordering apps, loyalty programs)
+- Sustainability concerns
+
+Create a summary table of the top 5 trends with percentage data if available.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 2 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Used web search to find market data</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Researched competitors</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Identified consumer trends</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Got data formatted in a table</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('stage1')">← Stage 1</button>
+                <button class="btn-next" onclick="showSection('stage3')">Stage 3: Data Detective →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 3: Data Detective -->
+    <section id="stage3">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest3.png" alt="Quest 3 - Data Detective" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 3</span>
+                <h2>🔬 Data Detective - Analysis & Trends</h2>
+                <div class="difficulty-display">Difficulty: ⭐⭐ Medium</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"Time to become a data detective! We'll analyze trends and find patterns in the 3-year SOI data!"</p>
+            </div>
+
+            <div class="resource-reminder">
+                <h4>📁 Upload All 3 Reports to Copilot</h4>
+                <p>For cross-year analysis, upload all three reports at once:</p>
+                <div class="mini-download-links">
+                    <a href="soi-reports/2023-State-of-the-Restaurant.pdf" download class="mini-download">📄 2023 SOI ⬇️</a>
+                    <a href="soi-reports/2024-State-of-the-Restaurant.pdf" download class="mini-download">📄 2024 SOI ⬇️</a>
+                    <a href="soi-reports/SOI-2025-Report.pdf" download class="mini-download">📄 2025 SOI ⬇️</a>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 3.1: Year-over-Year Comparison</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Learn to analyze trends across multiple years
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Trend Analysis</span>
+                    <span class="skill-tag">Comparison</span>
+                    <span class="skill-tag">Pattern Recognition</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>I have restaurant industry data for 3 years:
+
+2023: Market Sales $937B, Employment 15.1M, Labor cost challenge 89%
+2024: Market Sales $1,060B, Employment 15.4M, Labor cost challenge 96%  
+2025: Market Sales $1,103B, Employment 15.5M, Labor cost challenge 97%
+
+Please analyze:
+1. What is the growth rate year-over-year?
+2. Is growth accelerating or decelerating?
+3. What does the labor cost trend tell us?
+4. What can we predict for 2026?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 3.2: Inflection Point Analysis</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Identify turning points and pattern changes
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Analyze the RATE OF CHANGE across 3 years to identify inflection points:
+
+Market sales growth: 2023→2024 was +13.1%, but 2024→2025 slowed to +4.1%
+Traffic decline: 61% reported decline in 2023, improved to 32% in 2025
+Tech investment: 67% invested in 2023, dropped to 59% planning in 2025
+
+Questions:
+1. Which trends are DECELERATING (slowing down)?
+2. Which are IMPROVING?
+3. Which are STUCK (flat)?
+4. What does this tell us about the industry lifecycle - is it in growth, maturity, or decline phase?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 3.3: Segment Analysis</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Compare different restaurant segments
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Compare restaurant segments over 3 years:
+
+Full-Service Sales: 2023 $305B → 2024 $513B (+68%) → 2025 $533B (+3.9%)
+Limited-Service Sales: 2023 $370B → 2024 $510B (+37.8%) → 2025 $532B (+4.3%)
+
+Analyze:
+1. Which segment grew faster overall?
+2. Which segment is more stable now?
+3. If I'm opening a new restaurant in 2026, which segment has better prospects?
+4. What explains the different growth patterns?
+
+Create a recommendation for which segment to enter.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 3 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Analyzed year-over-year trends</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Identified inflection points</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Compared different segments</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Made predictions based on data</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('stage2')">← Stage 2</button>
+                <button class="btn-next" onclick="showSection('stage4')">Stage 4: Vision Crafter →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 4: Vision Crafter -->
+    <section id="stage4">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest4.png" alt="Quest 4 - Vision Crafter" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 4</span>
+                <h2>📊 Vision Crafter - Data Visualization</h2>
+                <div class="difficulty-display">Difficulty: ⭐⭐⭐ Hard</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"Pictures speak louder than numbers! Let's create charts and visualizations from the SOI data!"</p>
+            </div>
+
+            <div class="resource-reminder compact">
+                <span>📁 Need the reports?</span>
+                <a href="soi-reports/2023-State-of-the-Restaurant.pdf" download class="mini-link">2023</a>
+                <a href="soi-reports/2024-State-of-the-Restaurant.pdf" download class="mini-link">2024</a>
+                <a href="soi-reports/SOI-2025-Report.pdf" download class="mini-link">2025</a>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 4.1: Create Data Visualizations</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Ask Copilot to create charts and graphs
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Chart Creation</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Visual Storytelling</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a visualization showing restaurant industry growth over 3 years:
+
+Year | Market Sales | Growth Rate
+2023 | $937B | baseline
+2024 | $1,060B | +13.1%
+2025 | $1,103B | +4.1%
+
+Please create:
+1. A bar chart showing sales by year
+2. A line graph showing the growth rate trend
+3. Add annotations explaining what the deceleration means
+
+Use colors that show the slowdown clearly (green for growth, yellow/orange for slowing).</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 4.2: Dashboard Request</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Create a comprehensive dashboard view
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a "Restaurant Industry Health Dashboard" with these metrics:
+
+POSITIVE INDICATORS:
+- Market Sales: $1,103B ✅
+- Employment: 15.5M ✅
+- Operator Confidence: 41% ⚠️
+
+CHALLENGES:
+- Labor Cost Challenge: 97% 🔴
+- Food Cost Challenge: 95% 🔴
+- Traffic Decline: 32% expect lower ⚠️
+
+TECHNOLOGY:
+- Tech Investment Plans: 59% ⚠️
+- Loyalty Program Usage: 52% ⚠️
+
+Create a visual dashboard layout with:
+- Green/Yellow/Red indicators
+- Trend arrows (↑↓→)
+- Brief interpretation of each metric</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 4.3: Forecast Accuracy Check</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Evaluate predictions vs reality
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a "Forecast Accuracy Report Card" visualization:
+
+The 2023 report predicted:
+- Sales would grow 5-7% annually → Actual: 13.1% then 4.1%
+- Labor shortage would improve → Actual: Got worse (89%→97%)
+- Tech adoption would accelerate → Actual: Slowed (67%→59%)
+- Consumer spending would stay strong → Actual: Value-conscious (90%)
+
+Create a visual scorecard showing:
+| Prediction | Expected | Actual | Accurate? | Grade |
+
+Use letter grades (A, B, C, D, F) and explain why forecasts missed.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 4 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Created a chart/graph</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Built a dashboard view</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Evaluated forecast accuracy</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Used visual indicators effectively</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('stage3')">← Stage 3</button>
+                <button class="btn-next" onclick="showSection('stage5')">Stage 5: Strategy Master →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 5: Strategy Master -->
+    <section id="stage5">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest5.png" alt="Quest 5 - Strategy Master" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 5</span>
+                <h2>🎯 Strategy Master - Decision Making</h2>
+                <div class="difficulty-display">Difficulty: ⭐⭐⭐ Hard</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"Now we use all our SOI data to make smart strategic decisions! This is where analysis becomes action!"</p>
+            </div>
+
+            <div class="resource-reminder compact">
+                <span>📁 Need the reports?</span>
+                <a href="soi-reports/2023-State-of-the-Restaurant.pdf" download class="mini-link">2023</a>
+                <a href="soi-reports/2024-State-of-the-Restaurant.pdf" download class="mini-link">2024</a>
+                <a href="soi-reports/SOI-2025-Report.pdf" download class="mini-link">2025</a>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 5.1: Operator Profile Analysis</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Determine which business model has the best chance of success
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Strategic Analysis</span>
+                    <span class="skill-tag">Decision Framework</span>
+                    <span class="skill-tag">Risk Assessment</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Based on 3-year restaurant industry trends, analyze which operator profile is MOST likely to succeed in 2026:
+
+**PROFILE A: The Tech Innovator**
+- Heavy tech investment, AI/automation, digital-first
+
+**PROFILE B: The Value Master**  
+- Competing on price/deals, loyalty programs heavy
+
+**PROFILE C: The Experience Creator**
+- Premium positioning, unique dining experiences
+
+**PROFILE D: The Hybrid Operator**
+- Balanced tech/value/experience approach
+
+For each profile, rate:
+1. Does 3-year trend data support this approach? (YES/NO/MAYBE)
+2. Success probability in 2026? (High/Medium/Low)
+3. Key risks?
+4. Key advantages?
+
+RECOMMEND: Which profile should I pursue and why?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 5.2: Opportunity Gap Analysis</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Find market gaps and positioning opportunities
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>I want to open a NEW restaurant concept. Help me find market gaps:
+
+Current market situation:
+- 90% of consumers are value-conscious
+- 52% use loyalty programs (stable for 3 years)
+- 50% of sales are off-premises (delivery/takeout)
+- 97% of operators struggle with labor costs
+- Tech investment is SLOWING (67%→59%)
+
+Analyze:
+1. What WORKED in 2023-2025? Which concepts thrived?
+2. What GAPS exist? What's underserved?
+3. What's OVERSATURATED? What should I avoid?
+4. Strategic recommendation: What concept has best odds in 2026?
+
+Create a "Market Entry Strategy" with specific recommendations.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 5.3: Scenario Planning</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Plan for multiple possible futures
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create 3 scenarios for my restaurant opening in 2026:
+
+**BULL CASE (Optimistic):**
+- What if market grows faster than 4%?
+- What if labor costs stabilize?
+- What if consumer spending increases?
+
+**BASE CASE (Expected):**
+- Market grows 3-4% (current trend)
+- Challenges remain similar to 2025
+- Steady but slow improvement
+
+**BEAR CASE (Pessimistic):**
+- What if there's a recession?
+- What if food costs spike again?
+- What if competition intensifies further?
+
+For each scenario:
+1. Probability of occurring?
+2. Impact on my restaurant?
+3. How should I prepare?
+4. What triggers should I watch for?</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 5 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Analyzed operator profiles</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Identified market gaps</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Created scenario plans</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Made strategic recommendations</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('stage4')">← Stage 4</button>
+                <button class="btn-next" onclick="showSection('stage6')">Stage 6: Business Builder →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 6: Business Builder -->
+    <section id="stage6">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest6.png" alt="Quest 6 - Business Builder" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 6</span>
+                <h2>🏗️ Business Builder - Planning & Finance</h2>
+                <div class="difficulty-display">Difficulty: ⭐⭐⭐⭐ Expert</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"Time to build your actual business plan! We'll create financial models and risk assessments!"</p>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 6.1: Risk Assessment Matrix</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Create a comprehensive risk assessment
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Risk Analysis</span>
+                    <span class="skill-tag">Financial Planning</span>
+                    <span class="skill-tag">Mitigation Strategy</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a risk assessment for opening a restaurant in 2026 using historical data:
+
+Known risks from 2023-2025:
+- Labor shortage: 97% report as challenge
+- Food costs: 95% report as challenge  
+- Traffic decline: 32% expect lower traffic
+- Competition: 48% expect more competition
+
+Create a PROBABILITY & IMPACT MATRIX:
+
+| Risk Factor | Historical Data | 2026 Probability | Impact | Mitigation Strategy |
+
+Rate each: 
+- Probability: High/Medium/Low
+- Impact: High/Medium/Low
+
+Then give me:
+1. OVERALL RISK LEVEL for 2026
+2. Is 2026 a GOOD or RISKY time to open?
+3. What type of restaurant has LOWEST risk?
+4. Top 3 mitigation strategies I MUST implement</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 6.2: Financial Model</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Build a 5-year financial projection
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a 5-year financial model (2026-2030) for my restaurant:
+
+ASSUMPTIONS from historical data:
+- Market growth: ~4% per year (decelerating)
+- Labor costs: Increasing 7-10% per year
+- Food costs: Stable but high
+- Initial investment: $250,000
+
+MODEL REQUEST:
+Year 1 (2026): STARTUP PHASE
+- Expected revenue?
+- Operating costs breakdown?
+- Profit/Loss?
+
+Years 2-3: GROWTH PHASE  
+- Revenue growth rate?
+- When do I break even?
+
+Years 4-5: MATURITY PHASE
+- Stabilized margins?
+- ROI calculation?
+
+Create THREE SCENARIOS:
+- BULL CASE: 10% annual growth
+- BASE CASE: 4% annual growth (current trend)
+- BEAR CASE: 0% growth / decline
+
+Show me: Payback period, Break-even point, 5-year ROI</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 6.3: Business Plan Summary</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Create an executive summary for your restaurant
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create an EXECUTIVE SUMMARY for my restaurant business plan:
+
+My concept: [Fast Casual / Your choice]
+Location: [Your city]
+Target market: Value-conscious consumers who want quality food quickly
+Budget: $250,000
+
+Using all the analysis we've done, create a 1-page executive summary with:
+
+1. **Business Concept** (2-3 sentences)
+2. **Market Opportunity** (based on industry data)
+3. **Competitive Advantage** (what makes us different)
+4. **Financial Highlights** (investment, break-even, projected ROI)
+5. **Key Risks & Mitigations** (top 3)
+6. **Why Now?** (why 2026 is the right time)
+
+Format it professionally like a real business plan summary.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 6 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Created risk assessment matrix</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Built 5-year financial model</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Analyzed 3 scenarios</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Created executive summary</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('stage5')">← Stage 5</button>
+                <button class="btn-next" onclick="showSection('stage7')">Stage 7: Grand Finale →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 7: Grand Finale -->
+    <section id="stage7">
+        <div class="container">
+            <!-- Quest Image -->
+            <div class="quest-image-container">
+                <img src="img/quest7.png" alt="Quest 7 - Grand Finale" class="quest-image">
+            </div>
+
+            <div class="stage-header">
+                <span class="stage-badge">Stage 7</span>
+                <h2>🏆 Grand Finale - Investment Decision</h2>
+                <div class="difficulty-display">Difficulty: ⭐⭐⭐⭐⭐ Master</div>
+            </div>
+            <div class="cat-tip">
+                <div class="cat-avatar small">🐱</div>
+                <p>"This is it! The final quest! Use EVERYTHING you've learned to make the ultimate investment decision!"</p>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 7.1: The $500K Investment Decision</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Make a data-driven investment decision
+                </div>
+                <div class="skills-learned">
+                    <span class="skill-tag">Investment Analysis</span>
+                    <span class="skill-tag">ROI Comparison</span>
+                    <span class="skill-tag">Strategic Decision</span>
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>You have $500,000 to invest. Use all the 3-year restaurant industry data to decide:
+
+**OPTION A: Open Your Own Restaurant**
+- Full control, high risk
+- Industry data: Sales growing 4%, but 97% face labor challenges
+
+**OPTION B: Buy a Franchise**
+- Lower risk, proven model
+- Less control, franchise fees
+
+**OPTION C: Invest in Restaurant Technology**
+- Tech adoption: 59% of operators still investing
+- Only 28% say tech improved profitability
+
+**OPTION D: Wait for Better Timing**
+- Is 2026-2027 a better entry point?
+- What would need to change?
+
+For each option, provide:
+1. Expected ROI (5-year)
+2. Risk level (1-10)
+3. Probability of success
+4. Pros and cons based on data
+
+FINAL RECOMMENDATION: Which option should I choose and why?
+Show your reasoning using the data we've analyzed.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card">
+                <h3>🎯 Quest 7.2: Startup Validation</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Validate a food-tech startup idea
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Try This Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>I'm considering starting a food-tech STARTUP. Help me validate the idea:
+
+PROBLEMS I COULD SOLVE (from industry data):
+- 97% struggle with labor costs → Labor automation solution?
+- Only 28% say tech helps profits → Better ROI tech?
+- 70% use 3rd party delivery (lose 15-30% margin) → Delivery solution?
+- Tech complexity → Simplified platform?
+
+For my chosen problem [LABOR AUTOMATION]:
+
+1. **MARKET SIZE**: How many potential customers?
+2. **WILLINGNESS TO PAY**: Are operators increasing tech spend?
+3. **COMPETITION**: Who's already solving this?
+4. **TIMING**: Is the market ready NOW?
+5. **DIFFERENTIATION**: What's my unique angle?
+
+Give me a GO / NO-GO recommendation with specific reasons.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="quest-card final-quest">
+                <h3>🎯 FINAL QUEST: Your Restaurant Pitch</h3>
+                <div class="quest-objective">
+                    <strong>Objective:</strong> Create a complete investor pitch using all skills learned
+                </div>
+                <div class="prompt-box">
+                    <h4>📝 Ultimate Challenge Prompt:</h4>
+                    <div class="prompt-text">
+                        <code>Create a COMPLETE INVESTOR PITCH for my restaurant concept:
+
+Using everything we've learned from 7 stages of analysis, create:
+
+1. **THE HOOK** (1 sentence that grabs attention)
+
+2. **THE PROBLEM** (What gap in the market are we solving?)
+
+3. **THE SOLUTION** (Our restaurant concept)
+
+4. **MARKET OPPORTUNITY** (Size, growth, trends from our data)
+
+5. **COMPETITIVE ADVANTAGE** (Why we'll win)
+
+6. **BUSINESS MODEL** (How we make money)
+
+7. **FINANCIAL PROJECTIONS** (5-year summary)
+
+8. **RISK MITIGATION** (How we handle challenges)
+
+9. **THE ASK** (Investment needed, use of funds)
+
+10. **WHY NOW** (Why 2026 is the perfect time)
+
+Format this as a professional pitch deck outline that I could present to investors.
+Include specific data points from our analysis throughout.</code>
+                    </div>
+                    <button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="completion-checklist">
+                <h4>✅ Stage 7 Completion Checklist</h4>
+                <label><input type="checkbox" onchange="updateProgress()"> Analyzed investment options</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Validated startup idea</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Created investor pitch</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Made final recommendation</label>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="showSection('stage6')">← Stage 6</button>
+                <button class="btn-next" onclick="showSection('completion')">🏆 Complete Adventure!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completion Section -->
+    <section id="completion">
+        <div class="container completion-container">
+            <!-- Completion Image -->
+            <div class="completion-image-container">
+                <img src="img/complete.png" alt="Congratulations - Quest Complete!" class="completion-image">
+            </div>
+            <h1>Congratulations, Champion!</h1>
+            <div class="cat-celebration">
+                <p>"MEOW! You did it! You've mastered M365 Copilot Chat!"</p>
+            </div>
+            
+            <div class="skills-summary">
+                <h2>Skills You've Mastered</h2>
+                <div class="skill-grid">
+                    <div class="skill-earned">
+                        <span class="skill-icon">💬</span>
+                        <span>Basic Prompting</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">🔍</span>
+                        <span>Web Search</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">📊</span>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">📈</span>
+                        <span>Visualization</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">🎯</span>
+                        <span>Strategy</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">💰</span>
+                        <span>Financial Modeling</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">⚖️</span>
+                        <span>Risk Assessment</span>
+                    </div>
+                    <div class="skill-earned">
+                        <span class="skill-icon">🚀</span>
+                        <span>Business Planning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h2>What's Next?</h2>
+                <ul>
+                    <li>📄 Try uploading your OWN documents to Copilot for analysis</li>
+                    <li>🔗 Explore M365 Copilot integration with Word, Excel, PowerPoint</li>
+                    <li>🤝 Share your experience with teammates</li>
+                    <li>🎮 Try the exercise with a different business idea!</li>
+                </ul>
+            </div>
+
+            <button class="btn-restart" onclick="showSection('landing')">🔄 Play Again</button>
+        </div>
+    </section>
+
+    <!-- Reference Data Section -->
+    <section id="reference">
+        <div class="container">
+            <h2>📚 Quick Reference Data</h2>
+            <button class="btn-back" onclick="showSection('quest-map')" style="margin-bottom: 20px;">← Back to Quest Map</button>
+            
+            <div class="reference-table">
+                <h3>3-Year Industry Data Tracking (USA)</h3>
+                <table class="data-table full-width">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>2023</th>
+                            <th>2024</th>
+                            <th>2025</th>
+                            <th>Change 23→24</th>
+                            <th>Change 24→25</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Market Sales</td>
+                            <td>$937B</td>
+                            <td>$1,060B</td>
+                            <td>$1,103B</td>
+                            <td class="positive">+13.1%</td>
+                            <td class="neutral">+4.1%</td>
+                        </tr>
+                        <tr>
+                            <td>Employment</td>
+                            <td>15.1M</td>
+                            <td>15.4M</td>
+                            <td>15.5M</td>
+                            <td class="positive">+0.3M</td>
+                            <td class="neutral">+0.1M</td>
+                        </tr>
+                        <tr>
+                            <td>Full-Service Sales</td>
+                            <td>$305B</td>
+                            <td>$513B</td>
+                            <td>$533B</td>
+                            <td class="positive">+68%</td>
+                            <td class="neutral">+3.9%</td>
+                        </tr>
+                        <tr>
+                            <td>Limited-Service Sales</td>
+                            <td>$370B</td>
+                            <td>$510B</td>
+                            <td>$532B</td>
+                            <td class="positive">+37.8%</td>
+                            <td class="neutral">+4.3%</td>
+                        </tr>
+                        <tr>
+                            <td>Operator Confidence</td>
+                            <td>33%</td>
+                            <td>41%</td>
+                            <td>41%</td>
+                            <td class="positive">+8%</td>
+                            <td class="neutral">Flat</td>
+                        </tr>
+                        <tr>
+                            <td>Labor Cost Challenge</td>
+                            <td>89%</td>
+                            <td>96%</td>
+                            <td>97%</td>
+                            <td class="negative">+7%</td>
+                            <td class="negative">+1%</td>
+                        </tr>
+                        <tr>
+                            <td>Food Cost Challenge</td>
+                            <td>92%</td>
+                            <td>95%</td>
+                            <td>95%</td>
+                            <td class="negative">+3%</td>
+                            <td class="neutral">Flat</td>
+                        </tr>
+                        <tr>
+                            <td>Traffic Decline Reports</td>
+                            <td>61%</td>
+                            <td>35%</td>
+                            <td>32%</td>
+                            <td class="positive">-26%</td>
+                            <td class="positive">-3%</td>
+                        </tr>
+                        <tr>
+                            <td>Tech Investment</td>
+                            <td>67%</td>
+                            <td>61%</td>
+                            <td>59%</td>
+                            <td class="negative">-6%</td>
+                            <td class="negative">-2%</td>
+                        </tr>
+                        <tr>
+                            <td>Loyalty Program Usage</td>
+                            <td>52%</td>
+                            <td>52%</td>
+                            <td>52%</td>
+                            <td class="neutral">Flat</td>
+                            <td class="neutral">Flat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Reference Button -->
+    <button class="floating-btn" onclick="showSection('reference')" title="View Reference Data">📊</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

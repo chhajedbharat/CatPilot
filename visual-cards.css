@@ -1,0 +1,122 @@
+/* Stage Visual Cards (Poster Style - Design My Store) */
+.stage-visual-card {
+    border: 5px solid #1a3a4a;
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stage-visual-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 15px 15px 0px rgba(0,0,0,0.3);
+}
+
+/* Color Themes matching the poster */
+.stage-visual-card.style-yellow {
+    background-color: #F5B800;
+    color: #1a3a4a;
+}
+
+.stage-visual-card.style-teal {
+    background-color: #1a6b7c;
+    color: #F5B800;
+}
+
+.stage-visual-card.style-blue {
+    background-color: #1a3a4a;
+    color: #F5B800;
+}
+
+.visual-top-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.style-yellow .visual-top-text {
+    color: #1a3a4a;
+}
+
+.style-teal .visual-top-text,
+.style-blue .visual-top-text {
+    color: #F5B800;
+}
+
+.visual-icon {
+    font-size: 70px;
+    margin: 15px 0;
+    filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.stage-visual-card:hover .visual-icon {
+    transform: scale(1.15) rotate(-5deg);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: scale(1.15) rotate(-5deg); }
+    25% { transform: scale(1.15) rotate(5deg); }
+    50% { transform: scale(1.15) rotate(-5deg); }
+    75% { transform: scale(1.15) rotate(5deg); }
+}
+
+.visual-bottom-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.style-yellow .visual-bottom-text {
+    background: #1a3a4a;
+    color: #F5B800;
+}
+
+.style-teal .visual-bottom-text {
+    background: #F5B800;
+    color: #1a3a4a;
+}
+
+.style-blue .visual-bottom-text {
+    background: #F5B800;
+    color: #1a3a4a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .stage-visual-card {
+        max-width: 280px;
+        padding: 20px 15px;
+    }
+    
+    .visual-top-text {
+        font-size: 0.75rem;
+    }
+    
+    .visual-icon {
+        font-size: 55px;
+    }
+    
+    .visual-bottom-text {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

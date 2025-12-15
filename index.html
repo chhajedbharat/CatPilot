@@ -9,6 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Progress Tracker -->
+    <div id="progress-tracker" class="progress-tracker hidden">
+        <div class="tracker-content">
+            <div class="tracker-left">
+                <span class="tracker-cat">🐱</span>
+                <span class="tracker-title">Quest Progress</span>
+            </div>
+            <div class="tracker-center">
+                <div class="tracker-stages">
+                    <div class="tracker-stage completed" data-stage="1">1</div>
+                    <div class="tracker-stage locked" data-stage="2">🔒</div>
+                    <div class="tracker-stage locked" data-stage="3">🔒</div>
+                    <div class="tracker-stage locked" data-stage="4">🔒</div>
+                    <div class="tracker-stage locked" data-stage="5">🔒</div>
+                    <div class="tracker-stage locked" data-stage="6">🔒</div>
+                </div>
+                <div class="tracker-progress-bar">
+                    <div class="tracker-progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="tracker-right">
+                <span class="tracker-stats"><span id="stages-completed">0</span>/6 Stages</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Landing Page -->
     <section id="landing" class="active">
         <div class="landing-container">
@@ -96,42 +122,48 @@
             <h2>🗺️ Your Quest Journey</h2>
             <p class="map-subtitle">Click on each stage to begin your quest!</p>
             <div class="quest-path">
-                <div class="quest-node unlocked" onclick="showSection('stage1')">
+                <div class="quest-node unlocked" data-stage="1" onclick="navigateToStage('stage1')">
+                    <div class="node-lock">🔒</div>
                     <div class="node-number">1</div>
                     <div class="node-title">First Steps</div>
                     <div class="node-desc">Basic Copilot Skills</div>
                     <span class="difficulty">⭐</span>
                 </div>
                 <div class="path-line"></div>
-                <div class="quest-node" onclick="showSection('stage2')">
+                <div class="quest-node locked" data-stage="2" onclick="navigateToStage('stage2')">
+                    <div class="node-lock">🔒</div>
                     <div class="node-number">2</div>
                     <div class="node-title">Market Explorer</div>
                     <div class="node-desc">Research & Web Search</div>
                     <span class="difficulty">⭐⭐</span>
                 </div>
                 <div class="path-line"></div>
-                <div class="quest-node" onclick="showSection('stage3')">
+                <div class="quest-node locked" data-stage="3" onclick="navigateToStage('stage3')">
+                    <div class="node-lock">🔒</div>
                     <div class="node-number">3</div>
                     <div class="node-title">Data Detective</div>
                     <div class="node-desc">Analysis & Trends</div>
                     <span class="difficulty">⭐⭐</span>
                 </div>
                 <div class="path-line"></div>
-                <div class="quest-node" onclick="showSection('stage4')">
+                <div class="quest-node locked" data-stage="4" onclick="navigateToStage('stage4')">
+                    <div class="node-lock">🔒</div>
                     <div class="node-number">4</div>
                     <div class="node-title">Vision Crafter</div>
                     <div class="node-desc">Visualization</div>
                     <span class="difficulty">⭐⭐⭐</span>
                 </div>
                 <div class="path-line"></div>
-                <div class="quest-node" onclick="showSection('stage5')">
+                <div class="quest-node locked" data-stage="5" onclick="navigateToStage('stage5')">
+                    <div class="node-lock">🔒</div>
                     <div class="node-number">5</div>
                     <div class="node-title">Business Builder</div>
                     <div class="node-desc">Business Planning</div>
                     <span class="difficulty">⭐⭐⭐⭐</span>
                 </div>
                 <div class="path-line"></div>
-                <div class="quest-node" onclick="showSection('stage6')">
+                <div class="quest-node locked" data-stage="6" onclick="navigateToStage('stage6')">
+                    <div class="node-lock">🔒</div>
                     <div class="node-number">6</div>
                     <div class="node-title">Grand Finale</div>
                     <div class="node-desc">Investment & Launch</div>
@@ -228,7 +260,7 @@
 
             <div class="nav-buttons">
                 <button class="btn-back" onclick="showSection('quest-map')">← Quest Map</button>
-                <button class="btn-next" onclick="showSection('stage2')">Stage 2: Market Explorer →</button>
+                <button class="btn-next" onclick="navigateToNext('stage2')">Stage 2: Market Explorer →</button>
             </div>
         </div>
     </section>
@@ -318,7 +350,7 @@ Create a summary table of the top 5 trends with percentage data if available.</c
 
             <div class="nav-buttons">
                 <button class="btn-back" onclick="showSection('stage1')">← Stage 1</button>
-                <button class="btn-next" onclick="showSection('stage3')">Stage 3: Data Detective →</button>
+                <button class="btn-next" onclick="navigateToNext('stage3')">Stage 3: Data Detective →</button>
             </div>
         </div>
     </section>
@@ -462,7 +494,7 @@ Give me a clear recommendation with data to back it up!</code>
 
             <div class="nav-buttons">
                 <button class="btn-back" onclick="showSection('stage2')">← Stage 2</button>
-                <button class="btn-next" onclick="showSection('stage4')">Stage 4: Vision Crafter →</button>
+                <button class="btn-next" onclick="navigateToNext('stage4')">Stage 4: Vision Crafter →</button>
             </div>
         </div>
     </section>
@@ -576,7 +608,7 @@ Make it visually engaging with letter grades and emojis!</code>
 
             <div class="nav-buttons">
                 <button class="btn-back" onclick="showSection('stage3')">← Stage 3</button>
-                <button class="btn-next" onclick="showSection('stage5')">Stage 5: Business Builder →</button>
+                <button class="btn-next" onclick="navigateToNext('stage5')">Stage 5: Business Builder →</button>
             </div>
         </div>
     </section>
@@ -760,7 +792,7 @@ Format this professionally - make it investor-ready!</code>
 
             <div class="nav-buttons">
                 <button class="btn-back" onclick="showSection('stage4')">← Stage 4</button>
-                <button class="btn-next" onclick="showSection('stage6')">Stage 6: Grand Finale →</button>
+                <button class="btn-next" onclick="navigateToNext('stage6')">Stage 6: Grand Finale →</button>
             </div>
         </div>
     </section>

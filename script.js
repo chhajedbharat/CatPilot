@@ -1,5 +1,38 @@
 // Dungeon & Co-Pilot - Interactive M365 Copilot Training
 
+// Navigate to a stage (with lock checking)
+function navigateToStage(sectionId) {
+    const stageNumber = parseInt(sectionId.replace('stage', ''));
+    const stageNode = document.querySelector(`.quest-node[data-stage="${stageNumber}"]`);
+    
+    // Check if the stage is unlocked or completed
+    if (stageNode && (stageNode.classList.contains('unlocked') || stageNode.classList.contains('completed'))) {
+        showSection(sectionId);
+    } else {
+        // Show a message that the stage is locked
+        alert('🔒 This stage is locked! Complete the previous stage to unlock it.');
+    }
+}
+
+// Navigate to next stage (with completion checking)
+function navigateToNext(nextSectionId) {
+    const currentSection = document.querySelector('section.active');
+    
+    if (!currentSection) {
+        showSection(nextSectionId);
+        return;
+    }
+    
+    const checkboxes = currentSection.querySelectorAll('.completion-checklist input[type="checkbox"]');
+    
+    // If no checkboxes or all are checked, allow navigation
+    if (checkboxes.length === 0 || Array.from(checkboxes).every(cb => cb.checked)) {
+        showSection(nextSectionId);
+    } else {
+        alert('🔒 Please complete all tasks in the checklist before proceeding to the next stage!');
+    }
+}
+
 // Show section and handle navigation
 function showSection(sectionId) {
     // Hide all sections
@@ -15,6 +48,9 @@ function showSection(sectionId) {
         
         // Update quest map nodes based on progress
         updateQuestNodes();
+        
+        // Update next button state
+        updateNextButton();
         
         // Save progress
         saveProgress(sectionId);
@@ -80,6 +116,30 @@ function updateProgress() {
     
     // Update quest nodes
     updateQuestNodes();
+    
+    // Update next button state for current stage
+    updateNextButton();
+}
+
+// Update next button state based on current stage completion
+function updateNextButton() {
+    const currentSection = document.querySelector('section.active');
+    if (!currentSection) return;
+    
+    const checkboxes = currentSection.querySelectorAll('.completion-checklist input[type="checkbox"]');
+    const nextButton = currentSection.querySelector('.btn-next');
+    
+    if (checkboxes.length > 0 && nextButton) {
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        
+        if (allChecked) {
+            nextButton.classList.remove('locked');
+            nextButton.disabled = false;
+        } else {
+            nextButton.classList.add('locked');
+            nextButton.disabled = true;
+        }
+    }
 }
 
 // Update quest map node states
@@ -107,7 +167,10 @@ function updateQuestNodes() {
     nodes.forEach((node, index) => {
         node.classList.remove('unlocked', 'completed');
         
-        if (index <= lastCompletedIndex) {
+        // Stage 1 is always unlocked
+        if (index === 0) {
+            node.classList.add('unlocked');
+        } else if (index <= lastCompletedIndex) {
             node.classList.add('completed');
         } else if (index <= lastCompletedIndex + 1) {
             node.classList.add('unlocked');
